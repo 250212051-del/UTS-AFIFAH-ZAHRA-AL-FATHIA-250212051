@@ -1,0 +1,223 @@
+<!-- dokumen HTML5 -->
+<!DOCTYPE html>
+<!-- tanda awal dokumen HTML Dengan pengaturan bahasa indonesia -->
+<html lang="id">
+    <!-- tempat penyimpana instruksi untuk browser -->
+<head>
+    <!-- kode untuk karakter sperti emoji atau simbol terbaca dengan benar -->
+    <meta charset="UTF-8">
+    <!-- penentu skala tampilan web otomatis atau  menyesuaikan lebar layar -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--judul yg muncul di browser -->
+    <title>Jewelry YNY | Elegant & Modern</title>
+    <!-- memuat framework bootstrap 5.3.0 dari CDN untuk styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Menghubungkan CSS eksternal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- badan -->
+<body>
+    <!-- LOGO -->
+        <!-- py-3 : jarak atas bawah (padding), border=bottom : memberi garis pembatas di bawah header, bg-white : bg putih-->
+    <header class="py-3 border-bottom sticky-top bg-white">
+        <!-- mengatur konten dalam header supaya rapi, rata tengah, dan fleksibel (menggunakan flexbox) -->
+        <div class="container d-flex flex-wrap align-items-center justify-content-between">
+            <!-- untuk logo jika diklik kembali kehalaman utama -->
+            <a href="index.html" class="navbar-brand fw-bold fs-3 text-dark">JEWELRY.YNY.</a>
+            
+            <!-- MESIN PENCARI -->
+             <!-- pas diketik enter ke koleksi -->
+         <form action="koleksi.html">
+    <input type="text" class="form-control" placeholder="Cari-produk (Necklace, Bracelet, Earing)...">
+</form>
+
+    <!-- tombol link menuju halaman keranjang-->
+<a href="keranjang.html" class="btn btn-outline-dark position-relative border-0 fs-4 p-1">
+    <!-- menampilkan ikon keranjang -->
+    <i class="fa-solid fa-cart-shopping"></i>
+    <!-- link tampilan ikon keranjang di font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    
+    <!-- menunjukkan jumlah barang di keranjnag -->
+    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cart-counter" style="font-size: 0.65rem;">
+        0
+    </span>
+</a>
+</div>
+    </header>
+
+    <!-- NAVIGATION atau MENU-->
+     <!-- baris menu dengan bg abu-abu terang,jarak ats bawah, dan efek bayanagn tipis -->
+    <nav class="bg-light py-2 shadow-sm">
+        <!-- biar ditengah -->
+        <div class="container d-flex justify-content-center">
+            <!-- menu yang diatur oleh bootstrap agar sama barisnya -->
+            <ul class="nav">
+                <!-- FILE EKSTERNAL UNTUK PROFIL DAN KONTAK JUGA KOLEKSI TEMPAT PEMANGGILANNYA -->
+                <li class="nav-item"><a href="#" class="nav-link text-dark">HOME</a></li>
+                <li class="nav-item"><a href="profil.html" class="nav-link text-dark">PROFIL</a></li>
+                <li class="nav-item"><a href="kontak.html" class="nav-link text-dark">KONTAK</a></li>
+                <li class="nav-item"><a href="koleksi.html" class="nav-link text-dark">KOLEKSI</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- INI MEMAKAI BOOTSTRAP -->
+    <div id="jewelryCarousel" class="carousel slide border-bottom" data-bs-ride="carousel">
+         <!-- TEMPAT IMAGE KALUNG -->
+          <!-- tempat gambar muncul agar bisa muncul secara bergantian -->
+        <div class="carousel-inner">
+            <!-- slide gambar dan tulisan ini yang pertama kali muncul saat browser dibuka dgn padding atas bawah -->
+            <div class="carousel-item active text-center py-5">
+                <!-- pembungkus untuk produk -->
+            <div class="product-box mx-auto mb-3">
+                <!-- lokasi file gambar -->
+    <img src="img/kalung6.jpg" alt="Produk" class="img-fluid">
+</div>
+                    <!-- judul produk -->
+                <h4>Necklace Collection </h4>
+            </div>
+
+             <!-- TEMPAT IMAGE GELANG -->
+               <!-- tempat gambar muncul agar bisa muncul secara bergantian -->
+            <div class="carousel-item text-center py-5">
+                 <!-- slide gambar dan tulisan ini yang kedua muncul saat browser dibuka dgn padding atas bawah -->
+                <div class="product-box mx-auto mb-3">
+                     <!-- lokasi file gambar -->
+    <img src="img/gelang1.jpg" alt="Produk" class="img-fluid">
+</div>
+                    <!-- judul produk -->
+                <h4>Luxury Bracelet</h4>
+            </div>
+
+            <!-- TEMPAT IMAGE EARING -->
+             <!-- tempat gambar muncul agar bisa muncul secara bergantian -->
+            <div class="carousel-item text-center py-5">
+                 <!-- slide gambar dan tulisan ini yang ketiga muncul saat browser dibuka dgn padding atas bawah -->
+                <div class="product-box mx-auto mb-3">
+                    \ <!-- lokasi file gambar -->
+    <img src="img/earring1.jpg" alt="Produk" class="img-fluid">
+</div>
+                 <!-- judul produk -->
+                <h4>Elegant Earing</h4>
+            </div>
+        </div>
+
+        <!-- BUTTON PREVIOUS -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#jewelryCarousel" data-bs-slide="prev">
+            <!-- ICON PREVIOUS gambar bulat ada tanda panah-->
+            <span class="carousel-control-prev-icon bg-dark rounded-circle p-3"></span>
+        </button>
+        <!-- BUTTON NEXT -->
+        <button class="carousel-control-next" type="button" data-bs-target="#jewelryCarousel" data-bs-slide="next">
+            <!-- ICON NEXT gambar bulat ada tanda panah -->
+            <span class="carousel-control-next-icon bg-dark rounded-circle p-3"></span>
+        </button>
+    </div>
+
+    <!-- ISI UTAMA -->
+    <main class="container my-5">
+         <!-- KOTAK PENJELASAN DETAIL GELANG -->
+        <div class="row text-center g-4">
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm p-3">
+                    <h5>BRACELET</h5>
+                    <p class="text-muted small">detail mengenai material dan desain gelang premium.</p>
+                     <!-- keluar penjelasan kebawah -->
+                    <button class="btn btn-outline-dark btn-sm mt-auto" type="button" data-bs-toggle="collapse" data-bs-target="#detail-gelang">
+    Detail Bracelet
+</button>
+                </div>
+
+                 <!-- KOTAK PENJELASAN DETAIL KALUNG -->
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm p-3">
+                    <h5>NECKLACE</h5>
+                    <p class="text-muted small">detail mengenai material dan desain kalung premium.</p>
+                     <!-- keluar penjelasan kebawah -->
+                    <button class="btn btn-outline-dark btn-sm mt-auto" type="button" data-bs-toggle="collapse" data-bs-target="#detail-kalung">
+    Detail Necklace
+</button>
+                </div>
+            </div>
+
+            <!-- KOTAK PENJELASAN DETAIL EARING -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm p-3">
+                    <h5>EARING</h5>
+                    <p class="text-muted small">detail mengenai material dan desain anting-anting premium.</p>
+                    <!-- keluar penjelasan kebawah -->
+                    <button class="btn btn-outline-dark btn-sm mt-auto" type="button" data-bs-toggle="collapse" data-bs-target="#detail-earing">
+    Detail Earing
+</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ISI PENJELASAN DETAIL GELANG, KALUNG, ANTING -->
+    <!-- ini detail penjelasan punyak gelang -->
+ <section id="detail-gelang" class="collapse container my-5 pt-5">
+    <div class="p-5 mb-4 bg-light rounded-3 border">
+        <h2>Detail Material & Desain Gelang</h2>
+        <hr>
+        <ul>
+    <li><strong>Material:</strong> Stainless Steel Anti Karat</li>
+    <li><strong>Desain:</strong> Ornamen Kupu-Kupu Laser-Cut</li>
+    <li><strong>Warna:</strong> Silver Shiny Finish</li>
+    <li><strong>Keunggulan:</strong> Aman untuk kulit sensitif</li>
+</ul>
+<!-- tombol kembali keatas -->
+        <a href="index.html" class="btn btn-secondary btn-sm">Kembali ke Atas</a>
+    </div>
+</section>
+
+   <!-- ini detail penjelasan punyak kalung -->
+<section id="detail-kalung" class="collapse container my-5 pt-5">
+    <div class="p-5 mb-4 bg-light rounded-3 border">
+        <h2>Detail Necklace Collection</h2>
+        <hr>
+        <ul>
+            <li><strong>Material:</strong> Rose Gold Plated & Zirconia</li>
+            <li><strong>Desain:</strong> Geometris Asimetris Modern</li>
+            <li><strong>Keunggulan:</strong> Rantai kuat dan aman untuk kulit sensitif</li>
+        </ul>
+        <!-- tombol kembali keatas -->
+        <a href="index.html" class="btn btn-secondary btn-sm">Kembali ke Atas</a>
+    </div>
+</section>
+
+<!-- ini detail penjelasan punyak anting-->
+<section id="detail-earing" class="collapse container my-5 pt-5">
+    <div class="p-5 mb-4 bg-light rounded-3 border">
+        <h2>Detail Elegant Earing</h2>
+        <ul>
+            <li><strong>Material:</strong> Gold Plated & High-Quality Zirconia</li>
+            <li><strong>Desain:</strong> Siluet Daun Artistik dengan kristal gantung</li>
+            <li><strong>Keunggulan:</strong> Ringan dan aman untuk kulit sensitif</li>
+        </ul>
+        <a href="index.html" class="btn btn-secondary btn-sm">Kembali ke Atas</a>
+    </div>
+</section>
+
+<!-- INI FOOTER -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <div class="mb-3">
+                <i class="fa-solid fa-envelope me-2"></i><span class="mx-2">Gmail</span>
+                <i class="fa-brands fa-instagram me-2"></i><span class="mx-2">Instagram</span>
+                <i class="fa-brands fa-facebook me-2"></i><span class="mx-2">Facebook</span>
+            </div>
+            <!-- copyright -->
+            <p class="mb-0 small">&copy; 2026 Jewelry YNY. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- file eksternal javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="javascript.js"></script>
+</body>
+</html>

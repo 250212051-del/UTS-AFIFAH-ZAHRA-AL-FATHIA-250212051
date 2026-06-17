@@ -1,0 +1,67 @@
+/* Warna Dasar & Font */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000000; /* Putih Clean */
+}
+
+/* Header & Nav */
+.navbar-brand {
+    letter-spacing: 2px;
+    
+}
+/* Gradasi untuk seluruh latar belakang halaman */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Gradasi lembut dari biru muda ke putih ala Tiffany & Co */
+    background: linear-gradient(180deg, #f0f0f0 0%, #b6cbe6 100%); 
+    min-height: 100vh;
+}
+
+/* Gradasi khusus untuk area Hero/Slider (bagian biru di foto  */
+.carousel {
+    background: linear-gradient(90deg, #000000 0%, #a5c8ec 100%);
+    color: rgb(255, 255, 255);
+    padding: 50px 0;
+}
+/* Gradasi Eleman (Footer/Button) */
+footer {
+    background: linear-gradient(135deg, #000000 0%, #4084b5 100%);
+}
+
+/* Mengubah container dari bulat menjadi kotak lebar */
+.product-box {
+    width: 90%; /* Mengikuti lebar kolom */
+    max-width: 450px; /* Batas lebar maksimal agar tidak terlalu besar */
+    height: 250px; /* Tinggi kotak */
+    border-radius: 8px; /* Sudut sedikit melengkung agar terlihat modern */
+    border: 2px solid #ddd; 
+    overflow: hidden; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    transition: transform 0.3s ease; /* Untuk efek hover nanti */
+}
+
+/* Memastikan gambar memenuhi kotak tanpa gepeng */
+.product-box {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Foto akan terpotong rapi memenuhi kotak */
+    border-radius: 1; 
+}
+
+.product-box:hover {
+    transform: scale(1.20);
+}
+/* Pilih card atau elemen yang ingin dibuat bergerak */
+.card {
+    transition: transform 0.3s ease, shadow 0.3s ease; /* Memberikan efek halus saat bergerak */
+}
+
+/* Efek saat kursor lewat (hover) */
+.card:hover {
+    transform: translateY(-15px); /* Menarik elemen ke atas sejauh 15px */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Menambah bayangan supaya terlihat seperti melayang */
+}
+

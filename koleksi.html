@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewelry YNY | Koleksi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* BODY */
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* --- HEADER & NAVIGASI --- */
+        header {
+            background-color: #ffffff;
+            padding: 15px 5%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        /* logo */
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* IKON KERANJANG */
+        .cart-icon {
+            font-size: 22px;
+            position: relative;
+            cursor: pointer;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -10px;
+            background-color: #cc0000;
+            color: white;
+            font-size: 11px;
+            padding: 2px 6px;
+            border-radius: 50%;
+            font-weight: bold;
+        }
+
+        /* NAVIGASI */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #000;
+            font-weight: 000;
+            font-size: 14px;
+            text-transform: uppercase;
+            transition: color 0.s;
+        }
+
+        
+
+        /* --- HALAMAN KOLEKSI --- */
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ffffff;
+            text-transform: uppercase;
+        }
+
+        /* kolom produk */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        @media (max-width: 992px) {
+            .products-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .products-grid { grid-template-columns: repeat(2, 1fr); }
+            .header-top { flex-direction: column; gap: 15px; }
+            .search-container { width: 100%; margin: 0; }
+        }
+
+        /* product: foto, info,nama, harga */
+        .product-card {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            padding: 15px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+            background-color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .product-info {
+            margin-bottom: 15px;
+        }
+
+        .product-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .product-price {
+            font-size: 14px;
+            color: #666;
+            font-weight: 500;
+        }
+
+        /* BUTTON */
+        .btn-tambah {
+            width: 100%;
+            padding: 10px;
+            background-color: #ffffff;
+            border: 1px solid #333;
+            color: #333;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .btn-tambah:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* FOOTER */
+        footer{
+            background:#003366;
+            color:white;
+            text-align:center;
+            padding:25px;
+            margin-top:50px;
+        }
+
+        .footer-links a{
+            color:white;
+            text-decoration:none;
+            margin:0 10px;
+}
+
+@media(max-width:900px){
+
+}
+
+.footer-links{
+    margin-bottom:10px;
+}
+    </style>
+</head>
+<body>
+
+    <!-- LOGO -->
+    <header>
+        <div class="header-top">
+            <div class="logo">JEWELRY.YNY.</div>
+
+            <!-- ICON KERANJANG -->
+            <a href="keranjang.html" class="cart-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count" id="cart-counter">0</span>
+            </a>
+        </div>
+
+        <!-- NAVIGASI/MENU -->
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="profil.html">PROFIL</a>
+            <a href="kontak.html">KONTAK</a>
+            <a href="koleksi.html">KOLEKSI</a>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <div class="products-grid">
+            <!-- kartu produk -->
+            <div class="product-card">
+                <img src="img/earring1.jpg" alt="EARRING" class="product-image">
+                <div class="product-info">
+                    <div class="product-name">DIAMOND EARRING</div>
+                    <div class="product-price">Rp 1.500.000</div>
+                </div>
+                <button class="btn-tambah" onclick="tambahKeKeranjang('DIAMOND EARRING', 150000, 'img/earring1.jpg')">Tambah</button>
+            </div>
+
+        <!-- kartu produk -->
+            <div class="product-card">
+                <img src="img/earring2.jpg" alt="EARRING" class="product-image">
+                <div class="product-info">
+                    <div class="product-name">RIBBON DIAMOND EARRING</div>
+                    <div class="product-price">Rp 2.200.000</div>
+                </div>
+                <button class="btn-tambah" onclick="tambahKeKeranjang('RIBBON DIAMOND EARRING', 2200000, 'img/earring2.jpg')">Tambah</button>
+            </div>
+
+            <!-- kartu produk -->
+            <div class="product-card">
+                <img src="img/earring3.jpg" alt="EARRING" class="product-image">
+                <div class="product-info">
+                    <div class="product-name">BUTTERFLY STAR EARRING</div>
+                    <div class="product-price">Rp 1.850.000</div>
+                </div>
+                <button class="btn-tambah" onclick="tambahKeKeranjang('BUTTERFLY STAR EARRING', 1850000, 'img/earring3.jpg')">Tambah</button>
+            </div>
+
+            <!-- kartu produk -->
+            <div class="product-card">
+                <img src="img/earring4.jpg" alt="EARRING" class="product-image">
+                <div class="product-info">
+                    <div class="product-name">GLAMIRA KULP EARRING</div>
+                    <div class="product-price">Rp 3.100.000</div>
+                </div>
+                <button class="btn-tambah" onclick="tambahKeKeranjang('GLAMIRA KULP EARRING', 3100000, 'img/earring4.jpg')">Tambah</button>
+            </div>
+
+            <!-- kartu produk -->
+            <div class="product-card">
+                <img src="img/earring5.jpg" alt="EARRING" class="product-image">
+                <div class="product-info">
+                    <div class="product-name">GIWANG RUBY OVAL EARRING</div>
+                    <div class="product-price">Rp 1.200.000</div>
+                </div>
+                <button class="btn-tambah" onclick="tambahKeKeranjang('GIWANG RUBY OVAL EARRING',1200000, 'img/earring5.jpg')">Tambah</button>
+            </div>
+            <!-- kartu produk -->
+            <div class="product-card">
+                <img src="img/kalung1.jpg" alt="NECKLACE" class="product-image">
+                <div class="product-info">
+                    <div class="product-name">MOON AND STAR NECKLACE</div>
+                    <div class="product-price">Rp 1.950.000</div>
+                </div>
+                <button class="btn-tambah" onclick="tambahKeKeranjang('MOON AND STAR NECKLACE', 1950000, 'img/kalung1.jpg')">Tambah</button>
+            </div>
+
+            <!-- kartu produk -->
+            <div class="product-card">
+                <img src="img/kalung2.jpg" alt="NECKLACE" class="product-image">
+                <div class="product-info">
+                    <div class="product-name">DOLCE VITA NECKLACE</div>
+                    <div class="product-price">Rp 2.400.000</div>
+                </div>
+                <button class="btn-tambah" onclick="tambahKeKeranjang('DOLCE VITA NECKLACE', 2400000, img/kalung2.jpg)">Tambah</button>
+            </div>
+
+            <!-- kartu produk -->
+            <div class="product-card">
+                <img src="img/kalung3.jpg" alt="NECKLACE" class="product-image">
+                <div class="product-info">
+                    <div class="product-name">BUTTERFLY GOLD NEKCLACE</div>
+                    <div class="product-price">Rp 2.800.000</div>
+                </div>
+                <button class="btn-tambah" onclick="tambahKeKeranjang('BUTTERFLY GOLD NECKLACE', 2800000, 'img/kalung3.jpg')">Tambah</button>
+            </div>
+
+            <!-- kartu produk -->
+            <div class="product-card">
+                <img src="img/kalung4.jpg" alt="NECKLACE" class="product-image">
+                <div class="product-info">
+                    <div class="product-name">MINIMALIST DIAMOND NECKLACE</div>
+                    <div class="product-price">Rp 4.500.000</div>
+                </div>
+                <button class="btn-tambah" onclick="tambahKeKeranjang('MINIMALIST DIAMOND NECKLACE', 4500000, 'img/kalung4.jpg')">Tambah</button>
+            </div>
+
+            <!-- kartu produk -->
+            <div class="product-card">
+                <img src="img/kalung5.jpg" alt="NECKLACE" class="product-image">
+                <div class="product-info">
+                    <div class="product-name">RUBY DROP NECKLACE</div>
+                    <div class="product-price">Rp 1.100.000</div>
+                </div>
+                <button class="btn-tambah" onclick="tambahKeKeranjang('RUBY DROP NECKLACE', 3100000, img/kalung5.jpg)">Tambah</button>
+            </div>
+            
+            <!-- kartu produk -->
+            <div class="product-card">
+                <img src="img/kalung6.jpg" alt="NECKLACE" class="product-image">
+                <div class="product-info">
+                    <div class="product-name">DIAMOND CHARM NECKLACE</div>
+                    <div class="product-price">Rp 5.200.000</div>
+                </div>
+                <button class="btn-tambah" onclick="tambahKeKeranjang('DIAMOND CHARM NECKLACE', 5200000, 'img/kalung6.jpg')">Tambah</button>
+            </div>
+
+            <!-- kartu produk -->
+            <div class="product-card">
+                <img src="img/gelang2.jpg" alt="Kalung" class="product-image">
+                <div class="product-info">
+                    <div class="product-name">LOVE SHACKLE BRACELET></div>
+                    <div class="product-price">Rp 8.900.000</div>
+                </div>
+                <button class="btn-tambah" onclick="tambahKeKeranjang('LOVE SHACKLE BRACELET', 8900000, 'img/gelang2.jpg')">Tambah</button>
+            </div>
+
+            <!-- kartu produk -->
+            <div class="product-card">
+                <img src="img/gelang3.jpg" alt="BRACELET" class="product-image">
+                <div class="product-info">
+                    <div class="product-name">LUXE LOOP BRACELET</div>
+                    <div class="product-price">Rp 3.300.000</div>
+                </div>
+                <button class="btn-tambah" onclick="tambahKeKeranjang('LUXE LOOP BRACELET', 3300000, 'img/gelang3.jpg')">Tambah</button>
+            </div>
+
+            <!-- kartu produk -->
+            <div class="product-card">
+                <img src="img/gelang4.jpg" alt="BRACELET" class="product-image">
+                <div class="product-info">
+                    <div class="product-name">STAR ALIGN BRACELET</div>
+                    <div class="product-price">Rp 3.700.000</div>
+                </div>
+                <button class="btn-tambah" onclick="tambahKeKeranjang('STAR ALIGN BRACELET', 3700000, 'img/gelang4.jpg')">Tambah</button>
+            </div>
+
+            <!-- kartu produk -->
+            <div class="product-card">
+                <img src="img/gelang5.jpg" alt="BRACELET" class="product-image">
+                <div class="product-info">
+                    <div class="product-name">ETERNAL BLOOM BRACELET</div>
+                    <div class="product-price">Rp 4.500.000</div>
+                </div>
+                <button class="btn-tambah" onclick="tambahKeKeranjang('ETERNAL BLOOM BRACELET', 4500000, 'img/gelang5.jpg')">Tambah</button>
+            </div>
+
+            <!-- kartu produk -->
+            <div class="product-card">
+                <img src="img/gelang6.jpg" alt="BRACELET" class="product-image">
+                <div class="product-info">
+                    <div class="product-name">BLACKHOLE BRACELET</div>
+                    <div class="product-price">Rp 6.150.000</div>
+                </div>
+                <button class="btn-tambah" onclick="tambahKeKeranjang('BLACKHOLE BRACELET', 6150000, 'img/gelang6.jpg')">Tambah</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+<footer>
+
+    <div class="footer-links">
+        <i class="fa-solid fa-envelope me-2"></i><a href="#">Gmail</a>
+        <i class="fa-brands fa-instagram me-2"></i><a href="#">Instagram</a>
+        <i class="fa-brands fa-facebook me-2"></i><a href="#">Facebook</a>
+    </div>
+
+    <p>&copy; 2026 Jewelry YNY. All Rights Reserved.</p>
+
+</footer>
+
+
+ <!-- ini java scriptnya -->
+  <script>
+        // 1. Fungsi saat tombol TAMBAH diklik
+        function tambahKeKeranjang(nama, harga, gambar, bahan) {
+            // Ambil data keranjang dari memori browser
+            let keranjang = JSON.parse(localStorage.getItem('keranjangBelanja')) || [];
+            
+            // Cek apakah produk sudah ada
+            let produkSama = keranjang.find(item => item.nama === nama);
+
+            // harus ada btn-tambah ini dalam setiap kartu produk
+            if (produkSama) {
+                produkSama.jumlah += 1;
+            } else {
+                keranjang.push({
+                    nama: nama,
+                    harga: harga,
+                    gambar: gambar,
+                    jumlah: 1
+                });
+            }
+
+            // Simpan kembali ke memori browser
+            localStorage.setItem('keranjangBelanja', JSON.stringify(keranjang));
+            
+            // Update angka di atas ikon cart
+            updateCounterKeranjang();
+            
+            // Munculkan notifikasi popup
+            alert(nama + ' berhasil dimasukkan ke keranjang!');
+        }
+
+        //  Fungsi untuk update angka index merah di keranjang
+        function updateCounterKeranjang() {
+            let keranjang = JSON.parse(localStorage.getItem('keranjangBelanja')) || [];
+            let totalItem = 0;
+            
+            // total seluruh item dalam keranjang
+            keranjang.forEach(item => {
+                totalItem += item.jumlah;
+            });
+            
+            // update angka tampilan index merah keranjang diweb 
+            let badgeKeranjang = document.getElementById('cart-counter');
+            if (badgeKeranjang) {
+                badgeKeranjang.innerText = totalItem;
+            }
+        }
+
+        // 3. Jalankan hitungan otomatis setiap kali halaman koleksi dibuka/di-refresh
+        window.onload = updateCounterKeranjang;
+    </script>
+</body>
+</html>

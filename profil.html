@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - JEWELRY YNY</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-navy: #0d2c54;     
+            --accent-gold: #cda45e;     
+            --light-bg: #f8f9fa;
+        }
+        
+        /* BODY */
+        body {
+            background-color: var(--light-bg);
+            color: #125770;
+        }
+
+        /* Kartu Konten Utama */
+        .profile-card {
+            background: #ffffff;
+            border-radius: 12px;
+            border: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            padding: 40px;
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
+
+        /* Tempat Gambar Gedung (Sisi Kiri) */
+        .company-img-wrapper {
+            background-color: #eaeef3;
+            border-radius: 8px;
+            height: 240px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 1px dashed #b0c2d7;
+        }
+
+        .company-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Kotak Deskripsi (Sisi Kanan) */
+        .about-text-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+            height: 100%;
+            padding-left: 15px;
+        }
+
+        /* Ikon Berlian Mini di Atas Judul Tentang */
+        .mini-diamond {
+            color: var(--primary-navy);
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+
+        /* Ikon Fitur Tiga Pilar di Bagian Bawah */
+        .feature-icon-circle {
+            width: 60px;
+            height: 60px;
+            background: #fcfbf9;
+            border: 1px solid var(--accent-gold);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+        }
+
+        .text-navy {
+            color: var(--primary-navy);
+        }
+
+        .fw-semibold {
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-navy);
+            color: #ffffff;
+        }
+
+        footer a {
+            color: #ffffff;
+            opacity: 0.8;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            opacity: 1;
+            color: var(--accent-gold);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="py-3 border-bottom sticky-top bg-white">
+    <div class="container d-flex flex-wrap align-items-center justify-content-between">
+        
+        <!-- TEKAN LOGO BALIK KE HOME -->
+        <div class="logo-container d-flex align-items-center">
+            <a href="index.html" class="fs-4 fw-bold text-decoration-none text-navy">JEWELRY.YNY.</a>
+        </div>
+        
+        <!-- KEHALAM KERANJANG -->
+        <a href="keranjang.html" class="btn btn-outline-dark position-relative border-0 fs-4 p-1 ms-2">
+           <i class="fa-solid fa-cart-shopping"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cart-counter" style="font-size: 0.5em;">
+                0
+            </span>
+        </a>
+
+    </div>
+</header>
+
+<!-- NAVIGASI -->
+    <nav class="bg-light py-2 shadow-sm">
+        <div class="container d-flex justify-content-center">
+            <ul class="nav">
+                <li class="nav-item"><a href="index.html" class="nav-link text-dark">HOME</a></li>
+                <li class="nav-item"><a href="profil.html" class="nav-link text-dark">PROFIL</a></li>
+                <li class="nav-item"><a href="kontak.html" class="nav-link text-dark">KONTAK</a></li>
+                <li class="nav-item"><a href="koleksi.html" class="nav-link text-dark">KOLEKSI</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- LAYOUT PAKAI BOOTSTRAP -->
+    <main class="container">
+        
+        <div class="container">
+        
+        <div class="profile-card mx-auto" style="max-width: 1000px;">
+            
+            <div class="row align-items-center g-4 mb-5">
+                
+                <!-- IMG PERUSAHAAN/TOKO-->
+                <div class="col-md-5">
+                    <div class="company-img-wrapper shadow-sm">
+                        <img src="img/gedung1.jpg" alt="Produk" class="img-fluid">
+                    </div>
+                </div>
+
+                <!-- TENTANG TOKO/PERUSAHAAN -->
+                <div class="col-md-7">
+                    <div class="about-text-box">
+                        <div class="mini-diamond"><i class="fa-solid fa-gem"></i></div>
+                        <h4 class="text-navy fw-semibold mb-3">Tentang Jewelry YNY</h4>
+                        <p class="text-muted lh-lg mb-0" style="text-align: justify;">
+                            Jewelry YNY adalah sebuah perhiasan perusahaan yang menghadirkan koleksi dengan kualitas terbaik, desain modern, dan dedikasi mewah untuk setiap momen spesial Anda. Kami berkomitmen memberikan kemilau abadi lewat keindahan detail karya seni tinggi pada setiap produk kami.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- kartu kualitas terbaik -->
+            <div class="row g-4 border-top pt-5 text-center">
+                
+                <div class="col-md-4">
+                    <div class="feature-icon-circle shadow-sm">
+                        <i class="fa-solid fa-gem"></i>
+                    </div>
+                    <h5 class="text-navy fw-semibold mb-2">Kualitas Premium</h5>
+                    <p class="text-muted small px-2">Material terbaik, berkilau indah, dan aman digunakan dalam jangka panjang.</p>
+                </div>
+
+                <!-- kartu desain elegan -->
+                <div class="col-md-4">
+                    <div class="feature-icon-circle shadow-sm">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h5 class="text-navy fw-semibold mb-2">Desain Elegan</h5>
+                    <p class="text-muted small px-2">Desain eksklusif, artistik, dan selalu mengikuti perkembangan tren mode terkini.</p>
+                </div>
+
+                <!-- kartu layanan terpercaya -->
+                <div class="col-md-4">
+                    <div class="feature-icon-circle shadow-sm">
+                        <i class="fa-solid fa-user-check"></i>
+                    </div>
+                    <h5 class="text-navy fw-semibold mb-2">Layanan Terpercaya</h5>
+                    <p class="text-muted small px-2">Kepuasan, keamanan transaksi, dan kenyamanan pelanggan adalah prioritas utama kami.</p>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-4 mt-auto">
+        <div class="container text-center">
+            <div class="d-flex justify-content-center gap-4 mb-3">
+                <a href="mailto:info@jewelryyny.com" class="small"><i class="fa-solid fa-envelope me-2"></i>Gmail</a>
+                <a href="#" class="small"><i class="fa-brands fa-instagram me-2"></i>Instagram</a>
+                <a href="#" class="small"><i class="fa-brands fa-facebook me-2"></i>Facebook</a>
+            </div>
+            <p class="mb-0 small opacity-50">&copy; 2026 Jewelry YNY. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
